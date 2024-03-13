@@ -102,7 +102,7 @@ function saveFile(name, cont) {
 	d.className = "smoldialog";
 	d.innerText = "You have received a file:\n" + name + "\nSAVE?";
 	let yesbutt = document.createElement("button");
-	yesbutt.innerText = "YASSSSS";
+	yesbutt.innerText = "Yes";
 	yesbutt.onclick = e => {
 		d.remove();
 		var blob = new Blob([base64decode(cont)], {
@@ -111,7 +111,7 @@ function saveFile(name, cont) {
 		saveAs(blob, name);
 	}
 	let nobutt = document.createElement("button");
-	nobutt.innerText = "NOOOOOOO";
+	nobutt.innerText = "No";
 	nobutt.onclick = e => {
 		d.remove();
 	}
